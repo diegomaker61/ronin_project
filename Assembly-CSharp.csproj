@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E41D0A29-6609-7898-AE10-AB89BEEBC255}</ProjectGuid>
+    <ProjectGuid>{8120CC12-8539-2CBB-AEF8-EDA451E15692}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,20 +53,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\CombateJogador.cs" />
+     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+     <Compile Include="Assets\Script\Combate\AgroExterno.cs" />
+     <Compile Include="Assets\Script\Combate\CombateInimigo.cs" />
+     <Compile Include="Assets\Script\Combate\CombateJogador.cs" />
+     <Compile Include="Assets\Script\Combate\ControleInimigo.cs" />
+     <Compile Include="Assets\Script\Combate\Hit.cs" />
+     <Compile Include="Assets\Script\Combate\InfoJogador.cs" />
      <Compile Include="Assets\Script\ControleCamera.cs" />
-     <Compile Include="Assets\Script\ControleInimigo.cs" />
-     <Compile Include="Assets\Script\ControleInventario.cs" />
-     <Compile Include="Assets\Script\ControleItem.cs" />
-     <Compile Include="Assets\Script\ControleSlot.cs" />
-     <Compile Include="Assets\Script\ControleThumbItem.cs" />
-     <Compile Include="Assets\Script\InfoJogador.cs" />
-     <Compile Include="Assets\Script\Item.cs" />
+     <Compile Include="Assets\Script\Grid\ControladorGrid.cs" />
+     <Compile Include="Assets\Script\Grid\SlotGrid.cs" />
+     <Compile Include="Assets\Script\Inventario\ControleInventario.cs" />
+     <Compile Include="Assets\Script\Inventario\ControleItem.cs" />
+     <Compile Include="Assets\Script\Inventario\ControleSlot.cs" />
+     <Compile Include="Assets\Script\Inventario\ControleThumbItem.cs" />
+     <Compile Include="Assets\Script\Inventario\Item.cs" />
+     <Compile Include="Assets\Script\Inventario\Opcao.cs" />
      <Compile Include="Assets\Script\MovimentacaoJogador.cs" />
-     <Compile Include="Assets\Script\Opcao.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
+     <None Include="Assets\Shaders\ShaderAlwaysVisible.shader" />
+     <None Include="Assets\QuickOutline\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Shaders\ShaderOutline.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -74,6 +84,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -82,19 +93,19 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/acer/Documents/GamesUnity/The Ronin 2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/acer/Documents/GamesUnity/theronin2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/acer/Documents/GamesUnity/The Ronin 2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/acer/Documents/GamesUnity/theronin2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/acer/Documents/GamesUnity/The Ronin 2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/acer/Documents/GamesUnity/theronin2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/acer/Documents/GamesUnity/The Ronin 2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/acer/Documents/GamesUnity/theronin2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/acer/Documents/GamesUnity/The Ronin 2/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/acer/Documents/GamesUnity/theronin2/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -298,13 +309,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/acer/Documents/GamesUnity/The Ronin 2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/acer/Documents/GamesUnity/theronin2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/acer/Documents/GamesUnity/The Ronin 2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/acer/Documents/GamesUnity/theronin2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/acer/Documents/GamesUnity/The Ronin 2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/acer/Documents/GamesUnity/theronin2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

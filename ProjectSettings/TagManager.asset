@@ -8,6 +8,9 @@ TagManager:
   - Item
   - Moeda
   - Obstaculo
+  - JogadorBloqueio
+  - Inimigo
+  - SlotGrid
   layers:
   - Default
   - TransparentFX
@@ -20,9 +23,9 @@ TagManager:
   - PostProcessing
   - Chao
   - Items
-  - 
-  - 
-  - 
+  - Colisores
+  - ThumbInimigo
+  - Jogador
   - 
   - 
   - 
